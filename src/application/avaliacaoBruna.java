@@ -80,6 +80,10 @@ public class avaliacaoBruna {
 					System.out.printf("Custo total = R$ %.2f%n", custoTotal);
 					System.out.println();
 				}
+				else {
+					System.out.println();
+					System.out.println("Pessoa que ganhou mais: ANA");
+				}
 			
 			System.out.println();
 			System.out.println("MENU");
@@ -92,7 +96,8 @@ public class avaliacaoBruna {
 			
 		}		
 		
-		
+		System.out.println();
+		System.out.println("FIM DO PROGRAMA!");
 		sc.close();
 
 	}
