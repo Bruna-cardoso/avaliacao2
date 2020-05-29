@@ -11,7 +11,7 @@ public class avaliacaoBruna {
 		Scanner sc = new Scanner(System.in);
 		
 		String nome;
-		int horasTrabalhadas;
+		int horasTrabalhadas, opcao;
 		double valorHora;
 		char continuar;
 		
@@ -48,7 +48,36 @@ public class avaliacaoBruna {
 			continuar = sc.next().charAt(0);
 		}
 		
+		// Menu repetindo
 		
+		System.out.println();
+		System.out.println("MENU");
+		System.out.println("1 - Total de horas trabalhadas");
+		System.out.println("2 - Custo total");
+		System.out.println("3 - Nome da pessoa que ganhou mais");
+		System.out.println("4 - Sair");
+		System.out.print("Digite uma opção: ");
+		opcao = sc.nextInt();
+		
+		while (opcao != 4 || opcao > 4) {
+			
+			if (opcao > 4) {
+				System.out.println();
+				System.out.println("Opção inválida! Tente novamente:");
+				opcao = sc.nextInt();
+			}
+			else {
+			System.out.println();
+			System.out.println("MENU");
+			System.out.println("1 - Total de horas trabalhadas");
+			System.out.println("2 - Custo total");
+			System.out.println("3 - Nome da pessoa que ganhou mais");
+			System.out.println("4 - Sair");
+			System.out.print("Digite uma opção: ");
+			opcao = sc.nextInt();
+			}
+			
+		}
 		
 		
 		
