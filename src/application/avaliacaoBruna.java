@@ -11,8 +11,8 @@ public class avaliacaoBruna {
 		Scanner sc = new Scanner(System.in);
 		
 		String nome;
-		int horasTrabalhadas, opcao;
-		double valorHora;
+		int horasTrabalhadas, opcao, totalHoras;
+		double valorHora, custoTotal, totalValor;
 		char continuar;
 		
 		// Leitura dos dados
@@ -37,15 +37,22 @@ public class avaliacaoBruna {
 		System.out.print("Digitar outro (S/N)? ");
 		continuar = sc.next().charAt(0);
 		
+		totalHoras = horasTrabalhadas;
+		custoTotal = valorHora * horasTrabalhadas;
+		
 		while (continuar == 'S' || continuar == 's') {
 			System.out.print("Nome: ");
 			nome = sc.next();
 			System.out.print("Horas trabalhadas: ");
 			horasTrabalhadas = sc.nextInt();
+			totalHoras = totalHoras + horasTrabalhadas;
 			System.out.print("Valor por hora: ");
 			valorHora = sc.nextDouble();
+			custoTotal = custoTotal + valorHora * horasTrabalhadas;
 			System.out.print("Digitar outro (S/N)? ");
 			continuar = sc.next().charAt(0);
+
+			
 		}
 		
 		// Menu repetindo
@@ -61,6 +68,19 @@ public class avaliacaoBruna {
 		
 		while (opcao != 4 || opcao > 4) {
 			
+			// Tratativas 1 e 2
+			
+				if (opcao == 1) {
+					System.out.println();
+					System.out.print("Total de horas = " + totalHoras);
+					System.out.println();
+				}
+				else if (opcao == 2) {
+					System.out.println();
+					System.out.printf("Custo total = R$ %.2f%n", custoTotal);
+					System.out.println();
+				}
+			
 			System.out.println();
 			System.out.println("MENU");
 			System.out.println("1 - Total de horas trabalhadas");
@@ -70,13 +90,7 @@ public class avaliacaoBruna {
 			System.out.print("Digite uma opção: ");
 			opcao = sc.nextInt();
 			
-		}
-			
-		
-		// Tratativas 1 e 2
-		
-		
-		
+		}		
 		
 		
 		sc.close();
