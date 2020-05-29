@@ -61,12 +61,6 @@ public class avaliacaoBruna {
 		
 		while (opcao != 4 || opcao > 4) {
 			
-			if (opcao > 4) {
-				System.out.println();
-				System.out.println("Opção inválida! Tente novamente:");
-				opcao = sc.nextInt();
-			}
-			else {
 			System.out.println();
 			System.out.println("MENU");
 			System.out.println("1 - Total de horas trabalhadas");
@@ -75,9 +69,13 @@ public class avaliacaoBruna {
 			System.out.println("4 - Sair");
 			System.out.print("Digite uma opção: ");
 			opcao = sc.nextInt();
-			}
 			
 		}
+			
+		
+		// Tratativas 1 e 2
+		
+		
 		
 		
 		
